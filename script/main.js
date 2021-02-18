@@ -1,10 +1,10 @@
 class Warenkorb{
     constructor(){
-        this.warenkorbProdukte = []; //bestimmte Sortimentauswahl von Kunde
+        this.warenkorbProdukte = []; //bestimmte Sortimentauswahl vom Kunden
     }
     hinzufuegen(produkt){
         console.log(this.warenkorbProdukte, 'warenkorbprodukte')
-        //console.log('hinzufügen: ' + this.vorhanden(produkt.id))//geht nicht
+        //console.log('hinzufügen: ' + this.vorhanden(produkt.id))
         if(this.vorhanden(produkt.id)){
             console.log(" produkt vorhanden true");
         } else {
@@ -24,7 +24,7 @@ class Warenkorb{
         });
         $('#warenkorb').append("<div><hr>"+summegesamt+"€</div>")
     }
-    vorhanden(id){ //produkt vorhanden?
+    vorhanden(id){ //Produkt vorhanden?
             console.log('produkte',this.warenkorbProdukte, );
         let vorhanden = false;
         this.warenkorbProdukte.forEach(p => {
@@ -34,7 +34,7 @@ class Warenkorb{
                 vorhanden = true;
                     console.log(p);
                 p.warenkorbanzahl++;
-                // summe = anzahl mal preis
+                // Summe = Anzahl mal Preis
                 p.create();
                     console.log(p);
                 return;
@@ -59,7 +59,7 @@ class Produkt {
         this.img = img;
         this.html;
         this.warenkorbanzahl = 1;
-        this.create(productname, preis, id); //aufruf
+        this.create(productname, preis, id); //Aufruf
     }
     create(){
         this.html = `
@@ -72,26 +72,26 @@ class Produkt {
             </div><br>
             <div class="anzahl">${this.warenkorbanzahl}Stk<br></div>`
     }
-    addButton(){// produkte im array vom sortiment an der stelle(id)
-        console.log('this',this); //funktionsaufruf auf dem objekt mitgegebenen im html
+    addButton(){// Produkte im Array vom Sortiment an der Stelle(id)
+        console.log('this',this); //Funktionsaufruf auf dem Objekt mitgegebenen im html
         warenkorb.hinzufuegen(this);
         warenkorb.anzeigen();
     }
 }
 
-class Sortiment { //alle produkte für die darstellung
+class Sortiment { //alle Produkte für die Darstellung
     constructor(){            
     }
     produkte = [ ];
-    hinzufuegen(uebergebeneProdukte){//jedes einzelne erstellte erst nach erstellen möglich
-        uebergebeneProdukte.forEach(p=>{ //einzelnes produkt im sortimentarray
+    hinzufuegen(uebergebeneProdukte){//erst nach erstellen möglich
+        uebergebeneProdukte.forEach(p=>{ //einzelnes Produkt im Sortimentarray
             this.produkte.push(p);
         });            
     }
     anzeigen(){
         $('#sortiment').html(''); //zuerst leeren damit nicht doppelt gepusht
-        this.produkte.forEach(p => {// im p ein objekt aus produktearray
-            $('#sortiment').append(p.html); //neues produkt html aus konstruktor
+        this.produkte.forEach(p => {// im p ein Objekt aus Produktearray
+            $('#sortiment').append(p.html); //neues Produkt html aus Konstruktor
         });    
     }       
 }
@@ -111,7 +111,7 @@ let p8 = new Produkt('iPad mini', 760, 8, 7);
 
 
 let sortiment = new Sortiment();    // alle Produkte
-sortiment.hinzufuegen([p1, p2, p3, p4, p5, p6, p7, p8]); //in der Funktion einzeln ins html kommend vom
+sortiment.hinzufuegen([p1, p2, p3, p4, p5, p6, p7, p8]); //in der Funktion einzeln ins html 
 sortiment.anzeigen();
 
 let warenkorb = new Warenkorb();    // eingekaufte Produkte
