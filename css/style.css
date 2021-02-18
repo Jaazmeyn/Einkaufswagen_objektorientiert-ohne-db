@@ -38,7 +38,8 @@ h2 {
   right: 0;
   z-index: 1;
   box-shadow: 2px 2px 4px #000000;
-  width: 100px; }
+  width: 100px;
+  overflow: scroll; }
   #warenkorb img {
     display: none;
     position: relative;
@@ -52,9 +53,12 @@ h2 {
     font-size: 100%; }
   #warenkorb h3 {
     margin-bottom: 10px; }
+  #warenkorb .container .gekauft {
+    overflow: scroll; }
 
 #sortiment {
-  background-color: #fcdada; }
+  background-color: #fcdada;
+  min-height: 300px; }
   #sortiment div {
     background-color: white;
     width: 300px;
@@ -76,3 +80,11 @@ h2 {
 #div {
   float: left;
   width: 50%; }
+
+#footer {
+  margin-top: 500px;
+  background-color: #212529;
+  color: #fff;
+  bottom: 0;
+  z-index: 1;
+  position: relative; }

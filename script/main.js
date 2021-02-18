@@ -66,11 +66,10 @@ class Produkt {
             <div id="${this.id}"><h3>${this.productname}</h3>
             <img src="img/item${this.img}.jpg" alt="bild">
             <div class="buttondiv">
-                <p class="preis">Ab ${this.preis}€</p><br>
+                <p class="preis">Ab ${this.preis}€</p>
                 <button class="btn btn-outline-primary add" onclick = sortiment.produkte[${this.id}].addButton()>+</button>
                 <br>
             </div><br>
-            <span class="summe">produktpreis${this.summe}</span></div>
             <div class="anzahl">${this.warenkorbanzahl}Stk<br></div>`
     }
     addButton(){// produkte im array vom sortiment an der stelle(id)
