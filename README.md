@@ -8,4 +8,5 @@ Die Javascriptdatei besteht aus 3 Objekten
 ## installed:
 - sass
 ## embedded
-- bootstrap CDN, jquery
+- bootstrap CDN 
+- jquery
