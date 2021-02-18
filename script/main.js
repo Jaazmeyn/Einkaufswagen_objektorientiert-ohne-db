@@ -19,6 +19,8 @@ class Warenkorb{
         this.warenkorbProdukte.forEach(p => {
             $('#warenkorb').append(p.html).addClass('gekauft');
             summegesamt +=p.preis*p.warenkorbanzahl;
+            //10% rabatt
+            //let rabatt = summegesamt / 10; //(/100*10) 
         });
         $('#warenkorb').append("<div><hr>"+summegesamt+"€</div>")
     }
