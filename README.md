@@ -5,7 +5,7 @@ Die Javascriptdatei besteht aus 3 Objekten
 2. Produkt -> Produktebasis des Sortiments (alle produkte)
 3. Sortimentobjekt -> alle existierenden Produkte
 
-##installed:
+## installed:
 - sass
-##embedded
+## embedded
 - bootstrap CDN, jquery
