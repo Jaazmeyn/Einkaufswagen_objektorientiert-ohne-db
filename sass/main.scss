@@ -29,7 +29,6 @@ h2{
     position:relative;
 }
 #warenkorb{
-    
     display:none;
     box-sizing: content-box;
     margin: 0;
@@ -68,7 +67,6 @@ h2{
     }
 }
 #sortiment{
-    background-color: rgb(252, 218, 218);
     min-height: 300px;
 
     div{
@@ -100,12 +98,4 @@ h2{
 #div{
     float: left;
     width: 50%;
-}
-#footer{
-    margin-top: 500px;
-    background-color: #212529;
-    color: #fff;
-    bottom:0;
-    z-index: 1;
-    position:relative;
 }

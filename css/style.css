@@ -57,7 +57,6 @@ h2 {
     overflow: scroll; }
 
 #sortiment {
-  background-color: #fcdada;
   min-height: 300px; }
   #sortiment div {
     background-color: white;
@@ -80,11 +79,3 @@ h2 {
 #div {
   float: left;
   width: 50%; }
-
-#footer {
-  margin-top: 500px;
-  background-color: #212529;
-  color: #fff;
-  bottom: 0;
-  z-index: 1;
-  position: relative; }
